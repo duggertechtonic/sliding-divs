@@ -3,16 +3,17 @@
   flex-direction: column;
   width: 100%;
   max-width: 500px;
-  border: 1px solid black;
   margin: 0 auto;
 }
 
 .button-wrapper, .content-wrapper{
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .one{
-  flex: 1;
+  flex: 1 0 30%;
 }
 
 .hide{
@@ -22,4 +23,22 @@
 .show{
   transition: linear 200ms;
   transform: scale(1);
+}
+.active{
+  background-color: blue;
+}
+
+.dark{
+  background-color: #ccc;
+  width: 100%;
+}
+
+@media screen and (min-width:768px){
+  .wrapper{
+    max-width: 700px;
+  }
+
+  .one{
+    width: 20%;
+  }
 }
